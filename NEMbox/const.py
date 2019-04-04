@@ -1,6 +1,7 @@
 # encoding: UTF-8
 from __future__ import print_function, unicode_literals, division, absolute_import
 import os
+import tempfile
 
 
 class Constant(object):
@@ -11,3 +12,4 @@ class Constant(object):
     cookie_path = os.path.join(conf_dir, "cookie")
     log_path = os.path.join(conf_dir, "musicbox.log")
     cache_path = os.path.join(conf_dir, "nemcache")
+    fifo_path = os.path.join(tempfile.gettempdir(),'musicbox.fifo')

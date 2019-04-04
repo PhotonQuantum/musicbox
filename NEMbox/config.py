@@ -116,6 +116,17 @@ class Config(Singleton):
                 "default": False,
                 "describe": "Set true to make curses transparency.",
             },
+            'fifo_control': {
+                'value': False,
+                'default': False,
+                'describe': 'Control musicbox with unix named pipe.'
+            },
+            'fifo_interval':{
+                'value': 0.5,
+                'default': 0.5,
+                'describe': 'Background fifo fetch interval.'
+            }
+
         }
         self.config = {}
         if not os.path.isfile(self.path):
